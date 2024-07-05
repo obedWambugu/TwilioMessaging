@@ -39,15 +39,15 @@ public class MessageController {
 
         MyMessage newMessage = new MyMessage();
 
-        newMessage.setKutoka(message.getKutoka());
+        newMessage.setSender(message.getSender());
         newMessage.setBody(message.getBody());
-        newMessage.setMpaka(message.getMpaka());
+        newMessage.setRecipient(message.getRecipient());
 
         System.out.println(newMessage);
 
         Map<String, String> parameters = new HashMap<>();
-        parameters.put("To", newMessage.getMpaka());
-        parameters.put("From", newMessage.getKutoka());
+        parameters.put("To", newMessage.getRecipient());
+        parameters.put("From", newMessage.getSender());
         parameters.put("Body", newMessage.getBody());
 //
 //        ObjectMapper objectMapper = new ObjectMapper();
