@@ -18,8 +18,8 @@ public class MyMessage {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String Body;
-    private String Kutoka;
-    private String Mpaka;
+    private String Sender;
+    private String Recipient;
 
     public String getBody() {
         return Body;
@@ -29,20 +29,20 @@ public class MyMessage {
         this.Body = Body;
     }
 
-    public String getKutoka() {
-        return Kutoka;
+    public String getSender() {
+        return Sender;
     }
 
-    public void setKutoka(String Kutoka) {
-        this.Kutoka = Kutoka;
+    public void setSender(String Sender) {
+        this.Sender = Sender;
     }
 
-    public String getMpaka() {
-        return Mpaka;
+    public String getRecipient() {
+        return Recipient;
     }
 
-    public void setMpaka(String Mpaka) {
-        this.Mpaka = Mpaka;
+    public void setRecipient(String Recipient) {
+        this.Recipient = Recipient;
     }
 
     public void setId(Integer id) {
