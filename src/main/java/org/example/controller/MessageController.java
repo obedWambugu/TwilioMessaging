@@ -26,8 +26,8 @@ import java.util.stream.Collectors;
 public class MessageController {
 
     private final MessageService messageService;
-    private static final String DEFAULT_USER = "ACae3eef3bb9f4972aef8eb44930840b60";
-    private static final String DEFAULT_PASS = "d6be2b135661d3aef91a1d114922c962";
+    private static final String DEFAULT_USER = "YOUR_USER_ID";
+    private static final String DEFAULT_PASS = "YOUR_USER_PASS";
 
 
     public MessageController(MessageService messageService) {
@@ -70,12 +70,9 @@ public class MessageController {
 
         // Build the header String "Basic [Base64 encoded String]"
         String authHeader = "Basic " + new String(encodedAuth);
-        System.out.println(auth);
-        System.out.println(authHeader);
-        System.out.println(encodedAuth);
 
         HttpRequest postRequest = HttpRequest.newBuilder()
-                .uri(new URI("https://api.twilio.com/2010-04-01/Accounts/ACae3eef3bb9f4972aef8eb44930840b60/Messages.json"))
+                .uri(new URI("https://api.twilio.com/2010-04-01/Accounts/YOUR_USER_ID/Messages.json"))
                 .setHeader(HttpHeaders.AUTHORIZATION, authHeader)
                 .POST(HttpRequest.BodyPublishers.ofString(urlEncodedBody))
                 .build();
